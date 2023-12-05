@@ -6,4 +6,4 @@
 ## Gestion des Employes et des Machines:
 
 
-"# EJB-JSF-JNDI" 
+"# EJB-JSF-JNDI-PrimeFaces-GlassFish" 
