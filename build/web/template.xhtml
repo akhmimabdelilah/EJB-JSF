@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title><ui:insert name="title">Factory Management</ui:insert></title>
+        <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+    </h:head>
+
+    <h:body>
+
+        <p:growl id="growl" life="3000" />
+
+
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="65" header="#{bundle.AppName}"></p:layoutUnit>
+
+            <p:layoutUnit position="west" size="165" header="Factory Management">
+                <h:form id="menuForm">
+                    <p:menu>
+                        <p:menuitem value="#{bundle.Home}" outcome="/template" icon="ui-icon-home"/>
+                        <p:submenu label="#{bundle.Maintenance}">
+                            <p:menuitem value="Employe" outcome="/faces/web/employe/List.xhtml" />
+                            <p:menuitem value="Machine" outcome="/faces/web/machine/List.xhtml" />
+                        </p:submenu>
+                    </p:menu>
+                </h:form>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="60" class="flex-box">
+                <ui:insert name="footer"/>
+                @2023 - All rights reserved by AKHMIM Abdelilah
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center" header="Hello in Factory Management">
+                <ui:insert name="body"/>
+                
+            </p:layoutUnit>
+
+        </p:layout>
+
+    </h:body>
+
+</html>
