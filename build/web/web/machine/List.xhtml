@@ -45,25 +45,25 @@
                             </f:facet>
                             <h:outputText value="#{item.marque}"/>
                         </p:column>
-                        <p:column>
-                            <f:facet name="header">
+                        <p:column sortBy="#{item.dateAchat}">
+                            <f:facet name="header" >
                                 <h:outputText value="#{bundle.ListMachineTitle_dateAchat}"/>
                             </f:facet>
                             <h:outputText value="#{item.dateAchat}">
                                 <f:convertDateTime pattern="MM/dd/yyyy" />
                             </h:outputText>
                         </p:column>
-                        <p:column>
+                        <p:column >
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListMachineTitle_prix}"/>
                             </f:facet>
                             <h:outputText value="#{item.prix}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.employeId.nom}">
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListMachineTitle_employeId}"/>
                             </f:facet>
-                            <h:outputText value="#{item.employeId}"/>
+                            <h:outputText value="#{item.employeId.nom}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{machineController.prepareCreate}" update=":MachineCreateForm" oncomplete="PF('MachineCreateDialog').show()"/>
